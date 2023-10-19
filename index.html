@@ -1,0 +1,497 @@
+xc   /      <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Estadística</title>
+    <style>
+        body {
+            background-image: url('fondo1.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        p {
+            text-align: center;
+        }
+        #datos-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #datos-input {
+            width: 80%;
+        }
+        /* Estilo para los botones */
+        button {
+            margin: 5px;
+        }
+        /* Estilo para el cuadro de datos ordenados */
+        #datos-ordenados-container {
+            text-align: center;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        /* Estilo para la tabla */
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #000;
+            text-align: center;
+            padding: 5px;
+        }
+        #tabla-datos {
+        width: max-content; /* tabla igual que contenido */
+        margin: 20px auto;
+        }
+        #tabla-datos .text-izquierda {
+        text-align: left;
+        }
+
+        #tabla-datos .text-centrado {
+        text-align: center;
+        }
+
+        #tabla-datos, #tabla-datos th, #tabla-datos td {
+        font-size: 18px; /* Puedes ajustar el tamaño según tus necesidades */
+        }
+
+    </style>
+</head>
+<body style="font-family: 'Helvetica', sans-serif;" >
+    <h1>PROYECTO DE ESTADISTICA</h1>
+    <p>Juan Luis Tiney Sisay y Antonio Ramírez </p>
+
+    <div id="datos-container">
+        <label for="datos-input">Ingrese datos (números enteros separados por comas):</label>
+        <input type="text" id="datos-input" placeholder="Ejemplo: 1, 2, 3, 4">
+        <button id="Ordenar">Ordenar</button>
+        <button id="Editar">Editar</button>
+        <button id="Nuevo">Nuevo</button>
+    </div>
+
+    <div id="datos-ordenados-container">
+        <h2>Datos Ordenados</h2>
+        <p id="datos-ordenados"></p>
+    </div>
+    
+
+
+    
+    <table id="tabla-datos">
+        <thead>
+            <tr>
+                <th>Datos</th>
+                <th>Resultados</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Muestra "n"</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Xmax</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Xmin</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Rango R</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>No. Intervalos "ni"</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Rango Medio</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Intervalo "i"</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Intervalo de clases "iC"</td>
+                <td></td>
+            </tr>
+
+        </tbody>
+    </table>
+    <!-- segunda tabla -->
+<table id="tabla-datos2">
+    <thead>
+        <tr>
+            <th>Clases</th>
+            <th>Clases</th>
+            <th>Frecuencia</th>
+            <th>F.Acumulada</th>
+            <th>F.Relativa</th>
+            <th>Marca de Clase</th>
+            <th>Limite inferior</th>
+            <th>Limite superior</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        <tr>
+            <td>L. Inferior</td>
+            <td>L. Superior</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            
+        </tr>
+       
+       
+        
+    </tbody>
+</table>
+
+
+    <script>
+        document.getElementById('Ordenar').addEventListener('click', function () {
+            var datos = document.getElementById('datos-input').value;
+            
+            //  números enteros separados por comas
+            if (/^(\d+\, *)+\d+$/.test(datos)) {
+                var numeros = datos.split(',').map(Number);
+                numeros.sort(function(a, b) {
+                    return a - b;
+                });
+                var datosOrdenados = numeros.join(', ');
+                document.getElementById('datos-ordenados').textContent = datosOrdenados;
+    
+                
+                var nuevoButton = document.getElementById("Nuevo");   
+                nuevoButton.addEventListener("click", function() {location.reload();}); 
+                
+                // Contar cuántos datos ingresaste
+                var cantidadDatos = numeros.length;
+                // Encontrar el número máximo y min
+                var numeroMaximo = Math.max(...numeros);
+                var numeroMinimo = Math.min(...numeros);
+                // Calcular  rango
+                var rango = numeroMaximo - numeroMinimo;
+                // numero de intervalos
+                var numIntervalos = Math.round(1 + 3.322 * (Math.log10(cantidadDatos)));
+                //rango medio
+                var rangoMedio = (numeroMaximo + numeroMinimo)/2;
+                //intervalos redondeados
+                var intervalos = Math.round(rango/numIntervalos);
+                //intervalo de clase menos 1
+                var intervaloClase = intervalos -1;
+                
+                
+    
+                
+                // Mostrar los datos en la tabla uno en las celdas que corresponde
+                document.querySelector('table tr:first-child td:nth-child(2)').textContent = cantidadDatos;
+                
+                document.querySelector('table tr:nth-child(2) td:nth-child(2)').textContent = numeroMaximo;
+                
+                document.querySelector('table tr:nth-child(3) td:nth-child(2)').textContent = numeroMinimo;
+                
+                document.querySelector('table tr:nth-child(4) td:nth-child(2)').textContent = rango;
+                
+                document.querySelector('table tr:nth-child(5) td:nth-child(2)').textContent = numIntervalos;
+                document.querySelector('table tr:nth-child(6) td:nth-child(2)').textContent = rangoMedio;
+                document.querySelector('table tr:nth-child(7) td:nth-child(2)').textContent = intervalos;
+                document.querySelector('table tr:nth-child(8) td:nth-child(2)').textContent = intervaloClase;
+                
+                //tabular Datos COLUMNAS LIMITE INFERIOR Y LIMITE SUPERIOR
+                var li1 = numeroMinimo;
+                var ls1 = li1+intervaloClase;
+                
+                for (var i = 2; li1 <= numeroMaximo; i++) {
+                var li2 = ls1 + 1;
+                var ls2 = li2 + intervaloClase;
+
+                document.querySelector('table#tabla-datos2 tr:nth-child(' + i + ') td:nth-child(1)').textContent = li1;
+                document.querySelector('table#tabla-datos2 tr:nth-child(' + i + ') td:nth-child(2)').textContent = ls1;
+                li1 = li2;
+                ls1 = ls2;}
+
+                
+                var numFilas = 10; // se puede modificar
+
+                // Recorrer filas desde la Fila 2 hasta la Fila N
+                for (var fila = 2; fila <= numFilas; fila++) {
+                // Obtener los límites inferior y superior 
+                var li = parseFloat(document.querySelector('table#tabla-datos2 tr:nth-child(' + fila + ') td:nth-child(1)').textContent);
+                var ls = parseFloat(document.querySelector('table#tabla-datos2 tr:nth-child(' + fila + ') td:nth-child(2)').textContent);
+
+                //FRECUENCIA 
+                var frecuencia = 0;
+
+                // Recorrer los datos ingresados y contar cuántos están dentro del rango
+                for (var i = 0; i < numeros.length; i++) {
+                var numero = numeros[i];
+
+                // Verificar si el número está dentro del rango [li, ls]
+                if (numero >= li && numero <= ls) {
+                 frecuencia++;
+                }
+                }   
+
+                 // Mostrar la frecuencia EN SU RESPECTIVA COLUMNA
+                document.querySelector('table#tabla-datos2 tr:nth-child(' + fila + ') td:nth-child(3)').textContent = frecuencia;
+                }
+                
+
+               //COLUMNA FRECUENCIA ACUMULADA
+
+               var numFilas = 10; // se puede modificar
+
+                // Recorrer filas desde la Fila 2 hasta la Fila N
+            for (var fila = 2; fila <= numFilas; fila++) {
+
+                    // Obtener la frecuencia de la fila
+            var frecuencia = parseFloat(document.querySelector('table#tabla-datos2 tr:nth-child(' + fila + ') td:nth-child(3)').textContent);
+
+            // Si es la primera fila, la frecuencia acumulada es igual a la frecuencia
+            if (fila == 2) {
+                var frecuenciaAcumulada = frecuencia;
+            } else {
+                // La frecuencia acumulada de la fila actual es igual a la frecuencia acumulada de la fila anterior más la frecuencia actual
+                frecuenciaAcumulada += frecuencia;
+            }
+
+            // Mostrar la frecuencia acumulada en la columna 4 
+            document.querySelector('table#tabla-datos2 tr:nth-child(' + fila + ') td:nth-child(4)').textContent = frecuenciaAcumulada;
+
+            }
+
+
+
+            //FRECUENCIA RELATIVA
+            var numFilas = 10; // SE PUEDE MODIFICAR
+
+            // cantidad de datos N
+            var cantidadDatos = parseFloat(document.querySelector('table tr:first-child td:nth-child(2)').textContent);
+
+            // Recorrer filas desde la Fila 2 hasta la Fila N
+            var suma = 0;
+            for (var fila = 2; fila <= numFilas; fila++) {
+
+            // Obtener la frecuencia de la fila actual
+            var frecuencia = parseFloat(document.querySelector('table#tabla-datos2 tr:nth-child(' + fila + ') td:nth-child(3)').textContent);
+
+            // Calcular la frecuencia relativa como un 
+            var frecuenciaRelativa = frecuencia * 100 / cantidadDatos;
+
+            // Mostrar la frecuencia relativa en la columna 5 de la fila actual
+            document.querySelector('table#tabla-datos2 tr:nth-child(' + fila + ') td:nth-child(5)').textContent = frecuenciaRelativa.toFixed(2)+ '%';
+
+            // Sumar la frecuencia relativa a la suma
+            suma += frecuenciaRelativa;
+            }
+
+
+
+            
+            //marca de clase
+            var numFilas = 10; 
+
+            // Recorrer filas desde la Fila 2 hasta la Fila N
+            for (var fila = 2; fila <= numFilas; fila++) {
+
+            // Obtener los límites inferior y superior de la fila actual
+            var li = parseFloat(document.querySelector('table#tabla-datos2 tr:nth-child(' + fila + ') td:nth-child(1)').textContent);
+            var ls = parseFloat(document.querySelector('table#tabla-datos2 tr:nth-child(' + fila + ') td:nth-child(2)').textContent);
+
+            // Variable para contar la frecuencia
+            var frecuencia = 0;
+
+            // Recorrer los datos ingresados y contar cuántos están dentro del rango
+            for (var i = 0; i < numeros.length; i++) {
+                var numero = numeros[i];
+
+                // Verificar si el número está dentro del rango [li, ls]
+                if (numero >= li && numero <= ls) {
+                frecuencia++;
+                }
+            }   
+
+            // Variable sumar limites 
+            var suma = li + ls;
+
+            // Mostrar la la  suma y dividirlos en 2 segun la formula 
+            document.querySelector('table#tabla-datos2 tr:nth-child(' + fila + ') td:nth-child(6)').textContent = suma / 2;
+            }
+
+
+            //LIMITE INFERIOR 
+                var numFilas = 10; // modificar se puede
+
+                // Recorrer filas desde la Fila 2 hasta la Fila N
+                for (var fila = 2; fila <= numFilas; fila++) {
+
+                // Obtener los límites inferior y superior de la fila actual
+                var li = parseFloat(document.querySelector('table#tabla-datos2 tr:nth-child(' + fila + ') td:nth-child(1)').textContent);
+                //var ls = parseFloat(document.querySelector('table#tabla-datos2 tr:nth-child(' + fila + ') td:nth-child(2)').textContent);
+
+                // Variable para almacenar la suma de los números de la fila actual
+                var suma = li + ls;
+
+                // Convertir el límite inferior a entero
+                var liEntero = parseInt(li);
+
+                // Sumar 0.5 al límite inferior
+                var liMas05 = liEntero - 0.5;
+
+                // Mostrar el límite inferior + 0.5 
+                document.querySelector('table#tabla-datos2 tr:nth-child(' + fila + ') td:nth-child(7)').textContent = liMas05;
+                }
+
+            //limite superior
+                var numFilas = 10; 
+
+                // Recorrer filas desde la Fila 2 hasta la Fila N
+                for (var fila = 2; fila <= numFilas; fila++) {
+
+                // Obtener los límites inferior y superior de la fila actual
+                //var li = parseFloat(document.querySelector('table#tabla-datos2 tr:nth-child(' + fila + ') td:nth-child(1)').textContent);
+                var ls = parseFloat(document.querySelector('table#tabla-datos2 tr:nth-child(' + fila + ') td:nth-child(2)').textContent);
+
+                // Convertir el límite superior a entero
+                var lsEntero = parseInt(ls);
+
+                // Sumar 0.5 al límite superior
+                var lsMas05 = lsEntero + 0.5;
+
+                // Mostrar el límite superior + 0.5 en la columna 8 de la fila actual
+                document.querySelector('table#tabla-datos2 tr:nth-child(' + fila + ') td:nth-child(8)').textContent = lsMas05;
+                }
+
+
+        } //condicicion si los datos errores
+        else {
+                alert('Caracteres inválidos. Ingrese números enteros separados solo por comas.');
+            }
+        });
+    
+        document.getElementById('Editar').addEventListener('click', function () {
+            // Habilitar la edición directamente en el cuadro de entrada
+            var datosInput = document.getElementById('datos-input');
+            datosInput.removeAttribute('readonly');
+            datosInput.focus();
+        });
+    </script>
+    
+</body>
+</html>
